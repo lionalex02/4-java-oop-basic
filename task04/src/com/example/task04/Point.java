@@ -1,24 +1,26 @@
-package com.example.task01;
+package com.example.task04;
+
+import java.nio.channels.Pipe;
 
 /**
  * Класс точки на плоскости
  */
 public class Point {
-    int x;
-    int y;
+    final double x;
+    final double y;
 
-    public Point(int x1, int y1){
+    public Point(double x1, double y1){
         this.x = x1;
         this.y = y1;
     }
 
-    public void flip(){
-        int temp = x;
-        x = -y;
-        y = -temp;
-    }
+//    public void flip(){
+//        int temp = x;
+//        x = -y;
+//        y = -temp;
+//    }
 
-    public double distance(Point point){
+    public double distance (Point point){
         double dX = x - point.x;
         double dY = y - point.y;
         return Math.sqrt(dX*dX + dY*dY);
